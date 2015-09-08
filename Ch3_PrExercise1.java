@@ -7,7 +7,6 @@ import java.io.*;
  * CSM10J Lab #2
  */
 public class CSM10JLab2 {
-    static Scanner console = new Scanner(System.in);
     
     //Declare appropriate variables
     public static void main(String[] args)
@@ -69,16 +68,13 @@ public class CSM10JLab2 {
         
         //ASCII Characters
         char letter;
-        char nextLetter;
         letter = inFile.next().charAt(0);
-        nextLetter = letter++;
         outFile.println("\n");
-        outFile.println("The character that comes after " + letter 
-                + " in the ASCII set is " + nextLetter);
+        outFile.println("The character that comes after " + letter
+                + " in the ASCII set is " + ++letter);
         
         inFile.close();
-        outFile.close();
-        
+        outFile.close(); 
     }
     
 }
