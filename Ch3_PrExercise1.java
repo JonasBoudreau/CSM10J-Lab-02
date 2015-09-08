@@ -4,11 +4,13 @@ import java.io.*;
 
 /**
  * Jonas Boudreau
+ * Ch3_PrExercise1
  * CSM10J Lab #2
  */
 public class CSM10JLab2 {
     
     //Declare appropriate variables
+    static final double PI = 3.1416;
     public static void main(String[] args)
             throws FileNotFoundException
     {
@@ -34,8 +36,8 @@ public class CSM10JLab2 {
         double area;
         double circumference;
         radius = inFile.nextDouble();
-        area = (3.1416 * Math.pow(radius, 2));
-        circumference = (2 * 3.1416 * radius);
+        area = (PI * Math.pow(radius, 2));
+        circumference = (2 * PI * radius);
         outFile.println("\n");
         outFile.println("Circle:");
         outFile.println("Radius = " + String.format("%.2f", radius) + ' ' 
@@ -60,8 +62,7 @@ public class CSM10JLab2 {
         double newBalance;
         savBalance = inFile.nextDouble();
         interestRate = inFile.nextDouble();
-        newBalance = (savBalance * interestRate) + (savBalance);
-        outFile.println("\n");
+        newBalance = ((savBalance * (interestRate / 100)) / 12) + (savBalance);
         outFile.println("Beginning Balance = $" + String.format("%.2f", savBalance) + "," + ' ' 
                 + "interest rate = " + String.format("%.2f", interestRate));
         outFile.println("Balance at the end of the month = $" + String.format("%.2f", newBalance));
@@ -71,7 +72,7 @@ public class CSM10JLab2 {
         letter = inFile.next().charAt(0);
         outFile.println("\n");
         outFile.println("The character that comes after " + letter
-                + " in the ASCII set is " + ++letter);
+                + " in the ASCII set is " + ++letter + ".");
         
         inFile.close();
         outFile.close(); 
