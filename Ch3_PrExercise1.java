@@ -1,4 +1,4 @@
-package csm10j.lab.pkg2;
+package ch3_prexercise1;
 import java.util.*;
 import java.io.*;
 
@@ -7,7 +7,8 @@ import java.io.*;
  * Ch3_PrExercise1
  * CSM10J Lab #2
  */
-public class CSM10JLab2 {
+public class Ch3_PrExercise1 {
+    static Scanner console = new Scanner(System.in);
     
     //Declare appropriate variables
     static final double PI = 3.1416;
@@ -26,8 +27,8 @@ public class CSM10JLab2 {
         width = inFile.nextDouble();
         perimeter = (length * 2) + (width * 2);
         outFile.println("Rectangle:");
-        outFile.println("Length = " + length + ' ' 
-                + "width = " + width + ' ' 
+        outFile.println("Length = " + length + ", " 
+                + "width = " + width + ", "
                 + "perimeter = " + String.format("%.2f", perimeter));
         
         
@@ -40,8 +41,8 @@ public class CSM10JLab2 {
         circumference = (2 * PI * radius);
         outFile.println("\n");
         outFile.println("Circle:");
-        outFile.println("Radius = " + String.format("%.2f", radius) + ' ' 
-                + "area = " + String.format("%.2f", area) + ' ' 
+        outFile.println("Radius = " + String.format("%.2f", radius) + ", "  
+                + "area = " + String.format("%.2f", area) + ", " 
                 + "circumference = " + String.format("%.2f", circumference));
         
         //Name
@@ -53,7 +54,7 @@ public class CSM10JLab2 {
         age = inFile.nextInt();
         outFile.println("\n");
         outFile.println("Name: " + firstName + ' ' 
-                + lastName + "," + ' ' 
+                + lastName + ", " 
                 + "age: " + age);
         
         //Savings Account
@@ -63,7 +64,7 @@ public class CSM10JLab2 {
         savBalance = inFile.nextDouble();
         interestRate = inFile.nextDouble();
         newBalance = ((savBalance * (interestRate / 100)) / 12) + (savBalance);
-        outFile.println("Beginning Balance = $" + String.format("%.2f", savBalance) + "," + ' ' 
+        outFile.println("Beginning Balance = $" + String.format("%.2f", savBalance) + ", "
                 + "interest rate = " + String.format("%.2f", interestRate));
         outFile.println("Balance at the end of the month = $" + String.format("%.2f", newBalance));
         
